@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, {  useEffect, useState } from 'react';
 import Follower from './Follower';
 import { useFetch } from './useFetch';
 
@@ -9,8 +9,8 @@ function App(){
 
   useEffect(()=>{
     if(loading) return
-    setFollowers(data[page]);
-  },[loading,page]) 
+     setFollowers(data[page])
+  },[data, loading, page]); 
 
   const nextPage=()=>{
     setPage((oldPage)=>{
